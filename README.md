@@ -29,16 +29,18 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
-
+   Should there be a position that requires me to learn classComponents rather than the more popular functionalComponents I will be better prepared.
 2. Describe the different phases of the component lifecycle.
-
+   Mounting Phase involves the building of the component, when initial data is set and componentDidMount gets called
+   Updating Phase involves shouldComponentUpdate and can render
+   Unmountain Phase involves componentWillUnmount to clean up any side-effects and components
 3. Demonstrate an understanding of class component lifecycle methods.
-
+   Class components have inevitably have a 'lifecycle' which essentially describes the creation, growth, and destructuring of a component. it happens the way any other program would. It is important to learn about the cycle to be able to quickly react/update built-in events.
 4. Define stateful logic.
-
+   it can be defined as anything/function that is build into a component that deals with state.
 5. Describe how to test a React component with React Testing Library.
-
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
+   Testing is important in order to control the spur of buds and reduce the risk of regressions. We begin by choosing a testing library such as Jest; afterwards we use a method that describes the process of testing: Arrange, Act, and Assert.
+   You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
 
@@ -54,10 +56,10 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 **Basic set up**
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
 
 **Starting the server**
 
@@ -73,13 +75,13 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 **Starting your test runner**
 
-- [ ] In the final terminal window, make sure you are in the `client` folder still
+- [ x In the final terminal window, make sure you are in the `client` folder still
 - [ ] Start the test runner with `npm test` (I recommend doing this only when you're testing - any change in your app will make the tests run, and that could eat up your computer power)
 
 **Commit and Push OFTEN!**
 
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [x] Implement the project on this Branch, **committing progress & changes often.**
+- [x] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2: Project Requirements
 
