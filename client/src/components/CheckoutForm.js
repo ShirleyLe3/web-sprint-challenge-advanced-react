@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ShoppingCart from "./ShoppingCart";
 
 const initialValue = {
   firstName: "",
@@ -12,6 +13,24 @@ const initialValue = {
 // This form should be handled by a "useForm" custom hook
 // Build out the logic needed for a form custom hook (see the useForm.js file)
 // and replace the necessary stateful logic from CheckoutForm with the hook
+
+// constructor () {
+//   super();
+//   this.state = {
+//     item: []
+//   };
+// }
+
+const PlantList = (props) => {
+  return props.plants.map((plant) => (
+    <ShoppingCart
+      key={plant.id}
+      src={plant.img}
+      name={plant.name}
+      price={plant.price}
+    />
+  ));
+};
 
 const CheckoutForm = (props) => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
