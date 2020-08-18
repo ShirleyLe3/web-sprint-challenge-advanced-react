@@ -21,6 +21,7 @@ export default class PlantList extends Component {
     super();
     this.state = {
       plants: [],
+      allPlants: [],
     };
   }
   // when the component mounts:
@@ -28,17 +29,29 @@ export default class PlantList extends Component {
   //   - set the returned plants array to this.state.plants
   componentDidMount() {
     axios
-      .get(`http:localhost:3333/plants`)
+      .get("http://localhost:3333/plants")
       .then((response) => {
         console.log(`plants data: ${response.plants}`);
         this.setState({
-          plants: response.plants,
+          plants: response.data.plantsData,
+          allPlants: response.data.plantsData,  
+          //plantsData not showing?
         });
       })
       .catch((error) => {
         console.log(`error fetching data: ${error}`);
       });
   }
+
+
+// search??
+//     const handleChanges = (e) => {
+//     setValues({ ...values, [e.target.name]: e.target.value });
+//   );
+
+
+//     this.setState({ plants: searchMatch});
+// };
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {

@@ -1,28 +1,43 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import CheckoutForm from "./components/CheckoutForm";
-import PlantList from "./components/PlantList";
-import ShoppingCart from "./components/ShoppingCart";
-import App from "./App";
+import CheckoutForm from "./CheckoutForm.js";
+
+import PlantList from "./PlantList";
+import ShoppingCart from "./ShoppingCart";
+import App from "../App";
 
 // Write up the two tests here and make sure they are testing what the title shows
 
-// test("form header renders", () => {});
+// test("renders greeting on Greeting component", async () => {
+// //         // Arrange
+//   const { getByText } = render(<Greeting />);
+// //        // Act
+//   const greeting = getByText(/hello lambdalorians!/i);
+// //         // Assert
+//   expect(greeting).toBeInTheDocument();
+// });
 
-// test("form shows success message on submit with form details", () => {});
+test("form header renders", async () => {
+  const { getByText, getById } = render(<CheckoutForm />);
 
-test("form header renders", () => {
-  const { getByText } = render(<App />);
+  const header = getById(/checkout form /i);
 
-  getByText(/Plant 1/i);
+  expect(header).toBeTruthy();
 });
+//////////////////////////////////////////////////////////
+//
 
 test("form shows success message on submit with form details", () => {
-  const { getByText } = render(<App />);
-  fireEvent.click(getByText("Search"));
+  const { getByText, getById } = render(<CheckoutForm />);
+
+  fireEvent.click(getById("successMessage"));
+  const successMessage = getByText(/Your new green friends will be shipped to:/i)
+    
+
+  expect(successMessage).toBeTruthy();
 });
 
-test("Plant exists", () => {
-  const { findByText } = render(<App />);
-  findByText(/plant name/i);
-});
+// test("Plant exists", () => {
+//   const { findByText } = render(<CheckoutForm />);
+//   findByText(/plant name/i);
+// });
