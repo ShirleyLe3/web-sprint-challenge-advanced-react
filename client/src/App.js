@@ -21,6 +21,30 @@ function App() {
     setCart(cart.filter((p) => p.id !== plant.id));
   };
 
+  //   //  do I put this here?
+
+  // constructor(){
+  //   super();
+  //   this.state = {
+  //     data: []
+  //   };
+  // }
+
+  //* fetching data from local server
+  // componentDidMount() {
+  //   axios
+  //     .get('http://localhost:3333/plants')
+  //     .then(response => {
+  //       console.log(`plants data: ${response.data}`);
+  //       this.setState({
+  //         data: response.data
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.log(`error fetching data: ${error}`);
+  //     })
+  // }
+
   return (
     <div>
       <Router>
